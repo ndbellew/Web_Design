@@ -1,4 +1,4 @@
 <?php
-  header("Location: web/newpage.php");
+  header("Location: web/index.php");
   die();
 ?>
