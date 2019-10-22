@@ -20,3 +20,12 @@ try{
 } catch(PDOException $e){
   die("Error: Could not connect. " . $e->getMessage());
 }
+$pdo = new \PDO($conStr);
+$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
+$sql = "SELECT * FROM public.system";
+
+$statment = $pdo->query($sql);
+while ($row = $statment->fetch()) {
+  var_dump($row);
+}
